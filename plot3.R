@@ -1,5 +1,3 @@
-setwd("L://study//coursera_datascience//exploratory analysis//week1//data")
-
 # create temp file
 temp <- tempfile()
 # download the zip into the temp file
@@ -25,7 +23,7 @@ period.interest <- subset(hpc, Datetime >= as.POSIXct('2007-02-01 00:00') & Date
                             as.POSIXct('2007-02-02 23:59'))
 
 # plot 3
-png('plot3.png', width=480, height=480)
+png('plot3.png', width=480, height=480, res=72)
 
 plot(period.interest$Datetime, period.interest$Sub_metering_1, col="black", type="l", xlab="", ylab="Energy Sub Metering", main="")
 lines(period.interest$Datetime, period.interest$Sub_metering_2, col="red", type="l")

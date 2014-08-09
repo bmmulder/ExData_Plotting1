@@ -23,6 +23,6 @@ period.interest <- subset(hpc, Datetime >= as.POSIXct('2007-02-01 00:00') & Date
                             as.POSIXct('2007-02-02 23:59'))
 
 # plot 2
-png('plot2.png', width=480, height=480)
+png('plot2.png', width=480, height=480, res=72)
 plot(period.interest$Datetime, period.interest$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)", main="")
 dev.off()
